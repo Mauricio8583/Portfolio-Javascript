@@ -1,0 +1,322 @@
+.header{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+.photo{
+    width: 300px;
+    height: 300px;
+    border-radius: 50%;
+}
+
+.title{
+    text-align: center;
+}
+
+.main{
+    margin: .1rem;
+    padding: .1rem;
+    border: 1px solid #FFF;
+    border-radius: .1rem;
+}
+
+.main::before{
+    content: '';
+    background-image: url('../assets/background.svg');
+    background-repeat: no-repeat;
+    background-size: contain;
+    width: 80vw;
+    height: 60vh;
+    display: inline-block;
+    position: fixed;
+    top: 0;
+    left: 0;
+    z-index: -1;
+}
+
+.main::after{
+    content: '';
+    background-image: url('../assets/background.svg');
+    background-repeat: no-repeat;
+    background-size: contain;
+    width: 80vw;
+    height: 60vh;
+    display: inline-block;
+    position: fixed;
+    top: 0;
+    left: 0;
+    z-index: -1;
+    transform: rotate(45deg);
+}
+
+.information{
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+    width: 100%;
+}
+
+.information p{
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    margin: .5rem;
+    font-size: 1.25rem;
+}
+
+.information a{
+    color: #FFF;
+}
+
+.information p::before{
+    content: '';
+    display: inline-block;
+    width: 1rem;
+    height: 1rem;
+    background-repeat: no-repeat;
+    background-size: contain;
+    margin-right: .5rem;    
+}
+
+.information .job::before{
+    background-image: url("../../assets/icons/job.svg");
+}
+
+.information .location::before{
+    background-image: url("../../assets/icons/location.svg");
+}
+
+.information .mail::before{
+    background-image: url("../../assets/icons/mail.svg");
+}
+
+.information .phone::before{
+    background-image: url("../../assets/icons/phone.svg");
+}
+
+.acordeon{
+    display: flex;
+    flex-direction: column;
+    width: 100%;
+    margin: 1rem 0;
+    border: 1px solid #FFF;
+    border-radius: 1rem;
+    transition: 0.3s;
+}
+
+.acordeon:hover{
+    background-color: #55569E;
+    border-color: #55569E;
+    cursor: pointer;
+}
+
+.acordeon.open .trigger::after{
+    transform: rotate(180deg);
+}
+
+.acordeon.open .content{
+    display: inline-block;
+    height: auto;
+    opacity: 1;
+}
+
+.content{
+    display: none;
+}
+
+.trigger{
+    font-size: 1.5rem;
+    font-weight: 700;
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    align-items: center;
+    padding: 1rem 2rem;
+    background-color: transparent;
+    color: #FFF;
+    border: none;
+}
+
+.trigger::after{
+    content: "";
+    display: inline-block;
+    width: 2rem;
+    height: 2rem;
+    background-repeat: no-repeat;
+    background-size: contain;
+    background-image: url('../../assets/icons/arrow_up.svg');
+    transition: .25s;
+}
+
+.trigger:hover{
+    cursor: pointer;
+}
+
+.acordeon .content{
+    overflow: hidden;
+    height: 0;
+    padding: 1rem;
+    transition: .25s;
+    opacity: 0;
+    transition: opacity .25s ease-in-out;
+}
+
+.languages{
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    flex-wrap: wrap;
+    margin: 0;
+    padding: 0;
+    list-style: none;
+}
+
+.languages li{
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    padding: 1.5rem;
+    font-weight: 700;    
+
+}
+
+.languages li::before{
+    content: "";
+    display: inline-block;
+    width: 2rem;
+    height: 1rem;
+    margin-right: .5rem;
+    background-repeat: np-repeat;
+    background-size: contain;
+    background-image: url('../../assets/icons/check.svg');
+}
+
+.portfolio{
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-start;
+    width: 100%;
+    margin: 0;
+    padding: 0;
+    list-style: none;
+}
+
+.portfolio li{
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-start;
+    margin: 1rem 0;
+}
+
+.portfolio li .title{
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    font-weight: 700;
+    font-size: 1.25rem;
+    margin-bottom: .5rem;
+}
+
+.portfolio li a{
+    color: #FFF;
+    text-decoration: none;
+}
+
+.portfolio li a:hover{
+    text-decoration: underline;
+}
+
+.experience{
+    display: flex;
+    flex-direction: column;
+    margin: 0;
+    padding: 0;
+    list-style: none;
+}
+
+.experience li .period{
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+}
+
+.experience li .period::before{
+    content: "";
+    display: inline-block;
+    width: 2rem;
+    height: 1rem;
+    margin-right: .5rem;
+    background-repeat: np-repeat;
+    background-size: contain;
+    background-image: url('../../assets/icons/calen.svg');
+}
+
+.experience li{
+    margin-bottom: 1rem;
+}
+
+.skills .tools ul{
+    display: flex;
+    flex-direction: row;
+    justify-content: flex-start;
+    align-items: center;
+    flex-wrap: wrap;
+    margin: 0;
+    padding: 0;
+    list-style: none;
+}
+
+.skills .tools ul li img{
+    max-width: 100px;
+    margin: 0 .5rem;
+}
+
+.skills .soft ul{
+    display: flex;
+    flex-direction: row;
+    justify-content: flex-start;
+    align-items: center;
+    flex-wrap: wrap;
+    margin: 0;
+    padding: 0;
+}
+
+.skills .soft ul li{
+    margin-left: 2rem;
+    padding: .5rem;
+}
+
+@media only screen and (min-width: 768px) {
+
+    .header{
+        display: grid;
+        grid-template-areas:
+        "photo title"
+        "photo information" ;        
+    }
+
+    .photo{
+        grid-area: photo;
+    }
+
+    .title{
+        grid-area: title;
+        text-align: start;
+    }
+
+    .information{
+        grid-area: information;
+    }
+
+    .main{
+        max-width: 1024px;
+        margin: 1rem auto;
+    }
+
+    .skills{
+        display: grid;
+        grid-template-columns: 1fr 1fr;
+    }
+
+}
